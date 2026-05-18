@@ -1,0 +1,79 @@
+.dashboard-container {
+  padding: 8px;
+}
+
+.stat-card {
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.primary-gradient {
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%) !important;
+}
+
+.purple-gradient {
+  background: linear-gradient(135deg, #a855f7 0%, #9333ea 100%) !important;
+}
+
+.pink-gradient {
+  background: linear-gradient(135deg, #ec4899 0%, #db2777 100%) !important;
+}
+
+.blue-gradient {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%) !important;
+}
+
+.card-decoration {
+  position: absolute;
+  right: -20px;
+  bottom: -20px;
+  font-size: 100px;
+  color: rgba(255, 255, 255, 0.1);
+  transform: rotate(-15deg);
+}
+
+.chart-card, .activity-card {
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+}
+
+.mock-chart {
+  height: 300px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 20px 0;
+  gap: 16px;
+}
+
+.mock-chart .bar {
+  flex: 1;
+  background: linear-gradient(to top, #6366f1, #a855f7);
+  border-radius: 8px 8px 0 0;
+  position: relative;
+  min-width: 30px;
+  max-width: 60px;
+  animation: growUp 1s ease-out forwards;
+  transform-origin: bottom;
+}
+
+.mock-chart .bar span {
+  position: absolute;
+  bottom: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #64748b;
+  font-size: 12px;
+}
+
+@keyframes growUp {
+  from { transform: scaleY(0); }
+  to { transform: scaleY(1); }
+}
